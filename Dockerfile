@@ -1,4 +1,4 @@
-FROM rabbitmq:latest
+FROM rabbitmq:3.9
 ENV DEBIAN_FRONTEND=noninteractive;
 ENV DEBCONF_NONINTERACTIVE_SEEN=true;
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
