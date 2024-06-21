@@ -1,0 +1,5 @@
+FROM registry.kaiten-dev.ru/kaitensoftware-internal/rabbitmq:3.12.10-bitnami
+ENV DEBIAN_FRONTEND=noninteractive;
+ENV DEBCONF_NONINTERACTIVE_SEEN=true;
+RUN curl -L https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases/download/v3.12.0/rabbitmq_delayed_message_exchange-3.12.0.ez -o /opt/bitnami/rabbitmq/plugins/rabbitmq_delayed_message_exchange-3.12.0.ez && \
+    rabbitmq-plugins enable rabbitmq_delayed_message_exchange rabbitmq_management rabbitmq_prometheus
